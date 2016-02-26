@@ -1,0 +1,35 @@
+.highlight {
+    @extend .clearfix;
+
+    //background: $color_dark;
+    padding: 0 20px;
+    border-radius: $border_radius;
+    background: #263238;
+    color: #FFFFFF;
+    font-size: 1.6rem;
+    line-height: 1.8;
+
+    & .kd {
+        color: #C792EA;
+    }
+
+    & .nx {
+        color: #F55E53;
+    }
+
+    & .o {
+        color: #80CBC4;
+    }
+
+    & .s2 {
+        color: #C3E887;
+    }
+
+    & .p {
+        color: #FFFFFF;
+    }
+
+    & .c1 {
+        color: #546E7A;
+    }
+}
