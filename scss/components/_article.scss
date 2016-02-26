@@ -1,0 +1,7 @@
+.article {
+    &__read-more {
+        @extend .button;
+
+        float: right;
+    }
+}

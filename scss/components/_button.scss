@@ -1,0 +1,13 @@
+.button {
+    padding: 12px 20px;
+    border: 1px solid $color_splash;
+    border-radius: 8px;
+    background: transparent;
+    color: $color_splash;
+    text-decoration: none;
+
+    &:hover {
+        background: $color_splash;
+        color: #FFFFFF;
+    }
+}
