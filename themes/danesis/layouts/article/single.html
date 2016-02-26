@@ -1,0 +1,21 @@
+{{ partial "header.html" . }}
+<main>
+    <article>
+        <header>
+            <h1 class="article__title">{{ .Title }}</h1>
+            <div class="article__byline">
+                <time
+                    pubdate
+                    datetime="{{ .Date.Format "2006-01-02"}}"
+                    title="{{ .Date.Format "Mon, Jan 2, 2006" }}"
+                >
+                    {{ .Date.Format "Mon, Jan 2, 2006" }}
+                </time>
+            </div>
+        </header>
+        <div class="article__content">
+            {{ .Content }}
+        </div>
+    </article>
+</main>
+{{ partial "footer.html" . }}
