@@ -9,6 +9,23 @@ body {
     color: $color_dark;
 }
 
+a {
+    color: $color_splash;
+    text-decoration: underline;
+
+    &:hover {
+        color: darken($color_splash, 10%);
+    }
+
+    &:active {
+        color: darken($color_splash, 15%);
+    }
+
+    &:visited {
+        color: darken($color_splash, 5%);
+    }
+}
+
 h1,
 h2,
 h3,
@@ -17,8 +34,29 @@ h5,
 h6 {
     font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 600;
+
+    & a {
+        text-decoration: none;
+        color: $color_dark;
+
+        &:hover {
+            color: $color_dark;
+        }
+
+        &:active {
+            color: $color_dark;
+        }
+
+        &:visited {
+            color: $color_dark;
+        }
+    }
 }
 
 h1 {
     font-size: 3.6rem;
+}
+
+p {
+    line-height: 1.6;
 }
