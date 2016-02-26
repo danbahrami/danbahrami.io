@@ -15,7 +15,7 @@ gulp.task("scss", function () {
 
 // Watch SCSS folder for changes
 gulp.task("watch", function () {
-    gulp.watch("scss", ["scss"])
+    gulp.watch("scss/**/*", ["scss"])
 })
 
 // Set SCSS compiling as default task
