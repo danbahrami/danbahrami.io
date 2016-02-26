@@ -1,0 +1,7 @@
+.content {
+    @extend .clearfix;
+
+    width: 100%;
+    max-width: ($site_width - ($site_gutter * 2));
+    padding: 0 $site_gutter;
+}
