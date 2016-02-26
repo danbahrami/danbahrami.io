@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Dan Bahrami</title>
-    </head>
-    <body>
-        <p>Hi, I’m Dan Bahrami and I make websites.</p>
-    </body>
-</html>
+{{ partial "header.html" . }}
+    <p>Hi, I’m Dan Bahrami and I make websites.</p>
+
+    {{ range first 10 .Data.Pages }}
+        {{ if eq .Type "article" }}
+            <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+            <p>{{ .Summary }}</p>
+            {{ if .Truncated }}
+                <a href="{{ .Permalink }}">Read more</a>
+            {{ end }}
+        {{ end }}
+    {{ end }}
+
+{{ partial "footer.html" . }}
