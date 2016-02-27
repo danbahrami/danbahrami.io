@@ -3,11 +3,15 @@
 
     {{ range first 10 .Data.Pages }}
         {{ if eq .Type "article" }}
-            <h1><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-            <p>{{ .Summary }}</p>
-            {{ if .Truncated }}
+            <article class="article">
+                <h1><a href="{{ .Permalink }}" class="article__title">{{ .Title }}</a></h1>
+                <div class="article__content">
+                    {{ .Summary }}
+                </div>
+                {{ if .Truncated }}
                 <a href="{{ .Permalink }}" class="article__read-more">Read the full article</a>
-            {{ end }}
+                {{ end }}
+            </article>
         {{ end }}
     {{ end }}
 
