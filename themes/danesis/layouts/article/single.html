@@ -1,21 +1,35 @@
 {{ partial "header.html" . }}
 <main>
-    <article>
-        <header>
-            <h1 class="article__title">{{ .Title }}</h1>
-            <div class="article__byline">
-                <time
-                    pubdate
-                    datetime="{{ .Date.Format "2006-01-02"}}"
-                    title="{{ .Date.Format "Mon, Jan 2, 2006" }}"
-                >
+    <div class="content">
+        <article class="article">
+            <!--{{ .TableOfContents }}-->
+            <header>
+                <h1 class="article__title">{{ .Title }}</h1>
+                <div class="article__byline">
+                    <time
+                        pubdate
+                        datetime="{{ .Date.Format "2006-01-02"}}"
+                        title="{{ .Date.Format "Mon, Jan 2, 2006" }}"
+                    >
                     {{ .Date.Format "Mon, Jan 2, 2006" }}
-                </time>
+                    </time>
+                </div>
+            </header>
+            <div class="article__content">
+                {{ .Content }}
             </div>
-        </header>
-        <div class="article__content">
-            {{ .Content }}
-        </div>
-    </article>
+            {{ if .Params.Resources }}
+            <div class="article__resources">
+                {{ range .Params.Resources }}
+                {{ . }}
+                {{ end }}
+            </div>
+            {{ end }}
+        </article>
+    </div>
+    <aside class="sidebar sidebar--fixed">
+        {{ partial "author.html" . }}
+    </aside>
+    {{ partial "comments.html" . }}
 </main>
 {{ partial "footer.html" . }}
