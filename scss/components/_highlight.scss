@@ -1,14 +1,6 @@
 .highlight {
     @extend .clearfix;
 
-    //background: $color_dark;
-    padding: 0 20px;
-    border-radius: $border_radius;
-    background: #263238;
-    color: #FFFFFF;
-    font-size: 1.6rem;
-    line-height: 1.8;
-
     & .kd {
         color: #C792EA;
     }

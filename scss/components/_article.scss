@@ -1,7 +1,12 @@
 .article {
+    @extend .clearfix;
+
+    margin-bottom: 40px;
+
     &__byline {
         color: $color_light;
         font-size: 1.8rem;
+        font-weight: 200;
     }
 
     &__read-more {
