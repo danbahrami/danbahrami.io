@@ -7,7 +7,7 @@ var gulp         = require("gulp"),
 
 // Compile SCSS files to CSS
 gulp.task("scss", function () {
-    del(["themes/danesis/static/css/**/*"])
+    del(["static/css/**/*"])
     gulp.src("src/scss/**/*.scss")
         .pipe(sourcemaps.init())
         .pipe(sass({
@@ -17,16 +17,16 @@ gulp.task("scss", function () {
         .pipe(autoprefixer({browsers : ["last 20 versions"]}))
         .pipe(sourcemaps.write())
         .pipe(hash())
-        .pipe(gulp.dest("themes/danesis/static/css"))
+        .pipe(gulp.dest("static/css"))
         .pipe(hash.manifest("hash.json"))
         .pipe(gulp.dest("data/styles"))
 })
 
 gulp.task("images", function () {
-    del(["themes/danesis/static/images/**/*"])
+    del(["static/images/**/*"])
     gulp.src("src/images/**/*")
         .pipe(hash())
-        .pipe(gulp.dest("themes/danesis/static/images"))
+        .pipe(gulp.dest("static/images"))
         .pipe(hash.manifest("hash.json"))
         .pipe(gulp.dest("data/images"))
 })

@@ -8,10 +8,10 @@
                 <div class="article__byline">
                     <time
                         pubdate
-                        datetime="{{ .Date.Format "2006-01-02"}}"
-                        title="{{ .Date.Format "Mon, Jan 2, 2006" }}"
+                        datetime="{{ .PublishDate.Format "2006-01-02"}}"
+                        title="{{ .PublishDate.Format "Mon, Jan 2, 2006" }}"
                     >
-                    {{ .Date.Format "Mon, Jan 2, 2006" }}
+                    {{ .PublishDate.Format "Mon, Jan 2, 2006" }}
                     </time>
                 </div>
             </header>

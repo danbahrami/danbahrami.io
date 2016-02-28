@@ -1,6 +1,9 @@
 +++
+
 Author = "Dan Bahrami"
 Description = ""
 Tags = []
-Categories = []
+Resources = []
+slug = ""
+
 +++

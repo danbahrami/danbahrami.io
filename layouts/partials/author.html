@@ -1,7 +1,7 @@
 <div class="author author--sidebar">
     <img
-        src="/images/avatar.png"
-        srcset="/images/avatar@2x.png 2x"
+        src="/images/{{ index $.Site.Data.images.hash "avatar.png" }}"
+        srcset="/images/{{ index $.Site.Data.images.hash "avatar@2x.png" }} 2x"
         class="avatar"
     />
     <p>
