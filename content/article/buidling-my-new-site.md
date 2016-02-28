@@ -43,12 +43,14 @@ Your server no longer needs a database because it is just serving static content
 
 ## What you will need
 
-I will assume that you are comfortable using your command line, I will be demonstrating commands on the Mac Terminal. A basic knowledge of Javascript and SCSS will be helpful but not essential. I will also assume that you have [GIT][link-git] and [Homebrew][link-homebrew] installed on your machine. If not, they are both simple installs so just follow the links.
+I will assume that you are comfortable using the command line, I will be demonstrating commands on the Mac Terminal. A basic knowledge of Javascript and SCSS will be helpful but not essential. I will also assume that you have [GIT][link-git] and [Homebrew][link-homebrew] installed on your machine. If not, they are both simple installs so just follow the links. Now let's get started.
 
 [link-git]: https://git-scm.com/downloads
 [link-homebrew]: http://brew.sh/
 
 ## Git init
+
+The first thing we want to do is set up a local git repo in a new directory which will contain our site. I keep all my sites in a folder `~/Code` so I'll make a new directory there and initialise a local git repo by running the following in the command line...
 
 {{< highlight bash >}}
 mkdir ~/Code/MySite
@@ -57,6 +59,30 @@ git init
 {{< /highlight >}}
 
 ## Installing Hugo
+
+If you have Homebrew installed then installing hugo by running
+
+```
+brew install hugo
+```
+If you don't then the [Hugo docs][link-hugo-docs] explain how to install it manually. And while you're there, the docs are an excellent resource so you'll do well to just read them start to finish.
+
+[link-hugo-docs]: https://gohugo.io/overview/installing/
+
+Now you have the Hugo executable installed in your path, you can install a new Hugo site in the current directory by running
+
+```
+hugo new site .
+```
+
+If you list your directory contents (`ls`) you should now see that Hugo has setup a basic directory structure for you and added a config file.
+
+{{< highlight bash >}}
+ls
+archetypes   config.toml   content   data   layouts   static
+{{< /highlight >}}
+
+
 ### Creating a new hugo theme
 ### adding content
 
