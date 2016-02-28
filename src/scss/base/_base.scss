@@ -16,6 +16,17 @@ pre {
     color: #FFFFFF;
     font-size: 1.6rem;
     line-height: 1.8;
+
+    & code {
+        background: none;
+    }
+}
+
+code {
+    background: #EEEEEE;
+    font-size: 1.8rem;
+    border-radius: 8px;
+    padding: 2px 8px;
 }
 
 ul, ol {

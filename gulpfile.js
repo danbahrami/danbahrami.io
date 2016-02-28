@@ -8,7 +8,7 @@ var gulp         = require("gulp"),
 // Compile SCSS files to CSS
 gulp.task("scss", function () {
     del(["themes/danesis/static/css/**/*"])
-    gulp.src("scss/**/*.scss")
+    gulp.src("src/scss/**/*.scss")
         .pipe(sourcemaps.init())
         .pipe(sass({errLogToConsole : true}))
         .pipe(autoprefixer({browsers : ["last 20 versions"]}))
