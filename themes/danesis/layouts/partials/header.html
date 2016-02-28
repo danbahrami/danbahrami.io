@@ -3,7 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>{{ .Title }}</title>
-        <link rel="stylesheet" href="/css/main.css" />
+        {{ range $index, $element := $.Site.Data.styles.hash }}
+            <link rel="stylesheet" href="/css/{{ $element }}" />
+        {{ end }}
     </head>
     <body>
         <div class="container">

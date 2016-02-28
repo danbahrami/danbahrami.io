@@ -15,8 +15,8 @@ gulp.task("scss", function () {
         .pipe(sourcemaps.write())
         .pipe(hash())
         .pipe(gulp.dest("themes/danesis/static/css"))
-        .pipe(hash.manifest("hash-manifest.json"))
-        .pipe(gulp.dest("public"))
+        .pipe(hash.manifest("hash.json"))
+        .pipe(gulp.dest("data/styles"))
 })
 
 // Watch SCSS folder for changes
