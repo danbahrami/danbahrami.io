@@ -1,4 +1,9 @@
 .article {
+    &__byline {
+        color: $color_light;
+        font-size: 1.8rem;
+    }
+
     &__read-more {
         @extend .button;
 
