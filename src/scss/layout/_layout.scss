@@ -8,19 +8,29 @@
 }
 
 .content {
-    float: right;
-    width: 68.75%;
+    width: 100%;
+
+    @include breakpoint($tablet) {
+        float: right;
+        width: 68.75%;
+    }
 }
 
 .sidebar {
-    float: left;
-    margin-top: 30px;
-    padding-right: 30px;
-    width: 31.25%;
+    width: 100%;
+
+    @include breakpoint($tablet) {
+        float: left;
+        margin-top: 58px;
+        padding-right: 30px;
+        width: 31.25%;
+    }
 
     &--fixed {
-        position: fixed;
-        max-width: 260px;
-        width: 28.5%;
+        @include breakpoint($tablet) {
+            position: fixed;
+            max-width: 260px;
+            width: 28.5%;
+        }
     }
 }
