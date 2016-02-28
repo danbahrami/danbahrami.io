@@ -3,10 +3,10 @@ html {
 }
 
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    color: $color_dark;
     font-weight: 400;
     font-size: 2rem;
-    color: $color_dark;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 a {
@@ -32,12 +32,13 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 600;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    margin-top: 2em;
 
     & a {
-        text-decoration: none;
         color: $color_dark;
+        text-decoration: none;
 
         &:hover {
             color: $color_dark;
@@ -57,8 +58,8 @@ h1 {
     font-size: 3rem;
 
     &::before {
-        content: "# ";
         color: $color_light;
+        content: "# ";
     }
 }
 
@@ -66,8 +67,8 @@ h2 {
     font-size: 2.4rem;
 
     &::before {
-        content: "## ";
         color: $color_light;
+        content: "## ";
     }
 }
 
@@ -75,8 +76,8 @@ h3 {
     font-size: 2rem;
 
     &::before {
-        content: "### ";
         color: $color_light;
+        content: "### ";
     }
 }
 
