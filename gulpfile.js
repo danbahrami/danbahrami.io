@@ -10,7 +10,10 @@ gulp.task("scss", function () {
     del(["themes/danesis/static/css/**/*"])
     gulp.src("src/scss/**/*.scss")
         .pipe(sourcemaps.init())
-        .pipe(sass({errLogToConsole : true}))
+        .pipe(sass({
+            errLogToConsole : true,
+            outputStyle     : "compressed"
+        }))
         .pipe(autoprefixer({browsers : ["last 20 versions"]}))
         .pipe(sourcemaps.write())
         .pipe(hash())
@@ -19,9 +22,19 @@ gulp.task("scss", function () {
         .pipe(gulp.dest("data/styles"))
 })
 
-// Watch SCSS folder for changes
+gulp.task("images", function () {
+    del(["themes/danesis/static/images/**/*"])
+    gulp.src("src/images/**/*")
+        .pipe(hash())
+        .pipe(gulp.dest("themes/danesis/static/images"))
+        .pipe(hash.manifest("hash.json"))
+        .pipe(gulp.dest("data/images"))
+})
+
+// Watch asset folder for changes
 gulp.task("watch", function () {
     gulp.watch("src/scss/**/*", ["scss"])
+    gulp.watch("src/images/**/*", ["images"])
 })
 
 // Set SCSS compiling as default task
