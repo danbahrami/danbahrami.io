@@ -1,7 +1,25 @@
-.content {
+.container {
     @extend .clearfix;
 
     width: 100%;
     max-width: ($site_width - ($site_gutter * 2));
     padding: 0 $site_gutter;
+}
+
+.content {
+    float: right;
+    width: 68.75%;
+}
+
+.sidebar {
+    float: left;
+    width: 31.25%;
+    padding-right: 30px;
+    margin-top: 30px;
+
+    &--fixed {
+        position: fixed;
+        width: 28.5%;
+        max-width: 260px;
+    }
 }
