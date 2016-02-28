@@ -26,10 +26,10 @@
             </div>
             {{ end }}
         </article>
+        {{ partial "comments.html" . }}
     </div>
     <aside class="sidebar sidebar--fixed">
         {{ partial "author.html" . }}
     </aside>
-    {{ partial "comments.html" . }}
 </main>
 {{ partial "footer.html" . }}
