@@ -36,6 +36,11 @@ h6 {
     font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     margin-top: 2em;
 
+    &::before {
+        color: $color_light;
+        font-weight: 200;
+    }
+
     & a {
         color: $color_dark;
         text-decoration: none;
@@ -58,7 +63,6 @@ h1 {
     font-size: 3rem;
 
     &::before {
-        color: $color_light;
         content: "# ";
     }
 }
@@ -67,7 +71,6 @@ h2 {
     font-size: 2.4rem;
 
     &::before {
-        color: $color_light;
         content: "## ";
     }
 }
@@ -76,7 +79,6 @@ h3 {
     font-size: 2rem;
 
     &::before {
-        color: $color_light;
         content: "### ";
     }
 }
