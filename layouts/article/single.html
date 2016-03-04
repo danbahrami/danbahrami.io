@@ -9,7 +9,7 @@
                     <time
                         pubdate
                         datetime="{{ .PublishDate.Format "2006-01-02"}}"
-                        title="{{ .PublishDate.Format "Mon, Jan 2, 2006" }}"
+                        title="{{ .PublishDate.Format "Monday, Jan 2, 2006" }}"
                     >
                     {{ .PublishDate.Format "Mon, Jan 2, 2006" }}
                     </time>
@@ -18,10 +18,13 @@
             <div class="article__content">
                 {{ .Content }}
             </div>
-            {{ if .Params.Resources }}
+            {{ if .Params.resources }}
             <div class="article__resources">
-                {{ range .Params.Resources }}
-                {{ . }}
+                <h5 class="article__resources__title">
+                    Resources
+                </h5>
+                {{ range .Params.resources }}
+                    <a href="{{ . }}" class="article__resources__link">{{ . }}</a>
                 {{ end }}
             </div>
             {{ end }}

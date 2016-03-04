@@ -14,4 +14,10 @@
 
         float: right;
     }
+
+    &__resources {
+        @extend clearfix;
+
+        border-top: 1px solid #EEEEEE;
+    }
 }
