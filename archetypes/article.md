@@ -2,8 +2,9 @@
 
 Author = "Dan Bahrami"
 Description = ""
-Tags = []
 Resources = []
+draft = true
+publishdate = ""
 slug = ""
 
 +++
