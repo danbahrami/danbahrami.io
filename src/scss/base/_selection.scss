@@ -1,0 +1,11 @@
+* {
+    &::selection {
+        background: $color_splash;
+        color: #FFFFFF;
+    }
+
+    &::-moz-selection {
+        background: $color_splash;
+        color: #FFFFFF;
+    }
+}
