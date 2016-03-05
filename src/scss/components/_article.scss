@@ -9,6 +9,10 @@
         font-size: 1.8rem;
     }
 
+    &__content {
+        margin-bottom: 50px;
+    }
+
     &__read-more {
         @extend .button;
 
@@ -19,5 +23,16 @@
         @extend clearfix;
 
         border-top: 1px solid #EEEEEE;
+
+        &__title {
+            display: block;
+            margin: 4rem 0 2.5rem;
+            color: $color_light;
+            font-size: 1.8rem;
+        }
+
+        &__link {
+            font-size: 1.8rem;
+        }
     }
 }

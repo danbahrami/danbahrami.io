@@ -7,6 +7,7 @@ date = "2016-02-27T12:33:24+01:00"
 publishdate = "2016-02-05"
 slug = "building-and-deploying-websites-with-hugo-gulp-wercker-aws"
 resources = [
+    "https://www.smashingmagazine.com/2016/03/getting-disconnected-shallow-interaction-design-deeper-human-experiences/",
     "http://google.com",
     "https://blah.com"
 ]
@@ -193,10 +194,10 @@ Well that was fast! You should get some output telling you how many pages Hugo h
 
 ```
 ls public/
-404.html    article     index.html  index.xml   sitemap.xml
+404.html   article   index.html   index.xml   sitemap.xml
 
 ls public/article/
-index.html index.xml  my-first-article my-second-article
+index.html   index.xml   my-first-article   my-second-article
 ```
 
 It seemed like everything worked but not quite. By default the `hugo` command swallows any warning messages, I Don't know why but there you go. We can see what's really going on by adding a `--verbose` flag.
@@ -205,7 +206,7 @@ It seemed like everything worked but not quite. By default the `hugo` command sw
 hugo --verbose
 ```
 
-Hmm that doesn't look good. But if you read 
+Hmm that doesn't look good. Since I first discovered that Hugo hides these warnings by defualt I have always used the `--verbose` flag. Hugo is complaining that it can't find layouts for our articles, home page and 404 page.
 
 ### Single layout
 

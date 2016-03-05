@@ -20,12 +20,16 @@
             </div>
             {{ if .Params.resources }}
             <div class="article__resources">
-                <h5 class="article__resources__title">
+                <span class="article__resources__title">
                     Resources
-                </h5>
-                {{ range .Params.resources }}
-                    <a href="{{ . }}" class="article__resources__link">{{ . }}</a>
-                {{ end }}
+                </span>
+                <ul>
+                    {{ range .Params.resources }}
+                        <li>
+                            <a href="{{ . }}" class="article__resources__link">{{ . }}</a>
+                        </li>
+                    {{ end }}
+                </ul>
             </div>
             {{ end }}
         </article>
