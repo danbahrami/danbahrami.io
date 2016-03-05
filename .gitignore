@@ -1,7 +1,9 @@
+# System and environment
 .DS_Store
 .idea/
 node_modules/
-public/
 
+# Compiled
 data/**/hash.*
 static/
+public/
