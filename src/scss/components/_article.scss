@@ -33,6 +33,8 @@
         }
 
         &__link {
+            @include hyphenate();
+
             font-size: 1.8rem;
         }
     }
