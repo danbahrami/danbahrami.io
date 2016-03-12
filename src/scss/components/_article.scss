@@ -2,6 +2,7 @@
     @extend .clearfix;
 
     margin-bottom: 40px;
+    clear: both;
 
     &__byline {
         color: $color_light;
@@ -10,7 +11,7 @@
     }
 
     &__content {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
 
     &__read-more {

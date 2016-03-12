@@ -1,0 +1,13 @@
+a.home-link {
+    @extend .button;
+
+    float: right;
+    width: 100%;
+    border-color: $color_divider;
+    color: $color_light;
+    text-align: center;
+
+    &:hover {
+        background: $color_divider;
+    }
+}

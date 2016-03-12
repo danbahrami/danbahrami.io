@@ -5,7 +5,7 @@ html {
 body {
     color: $color_dark;
     font-weight: 400;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
@@ -32,9 +32,9 @@ h3,
 h4,
 h5,
 h6 {
+    margin-top: 2em;
     font-weight: 600;
     font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    margin-top: 2em;
 
     &::before {
         color: $color_light;
@@ -60,6 +60,7 @@ h6 {
 }
 
 h1 {
+    margin-top: 4rem;
     font-size: 3rem;
 
     &::before {

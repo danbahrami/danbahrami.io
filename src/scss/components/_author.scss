@@ -1,8 +1,30 @@
 .author {
-    text-align: center;
+    text-align: left;
     font-size: 1.6rem;
+    display: flex;
 
-    & .avatar {
-        width: 115px;
+    @include breakpoint($tablet) {
+        display: block;
+        text-align: center;
+    }
+
+    &__avatar {
+        width: 75px;
+        height: 75px;
+        margin-right: 16px;
+
+        @include breakpoint($tablet) {
+            width: 115px;
+            height: 115px;
+            margin: 0;
+        }
+    }
+
+    &__description {
+        margin-top: 0;
+
+        @include breakpoint($tablet) {
+            margin-top: 16px;
+        }
     }
 }

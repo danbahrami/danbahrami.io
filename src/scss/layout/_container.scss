@@ -1,0 +1,8 @@
+.container {
+    @extend .clearfix;
+
+    margin: 0 auto;
+    padding: 30px $site_gutter;
+    max-width: ($site_width - ($site_gutter * 2));
+    width: 100%;
+}

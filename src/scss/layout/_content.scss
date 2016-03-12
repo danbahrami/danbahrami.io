@@ -1,0 +1,8 @@
+.content {
+    width: 100%;
+
+    @include breakpoint($tablet) {
+        float: right;
+        width: 68.75%;
+    }
+}

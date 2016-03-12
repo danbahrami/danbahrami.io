@@ -1,0 +1,15 @@
+/*
+ * Media queries
+ */
+@mixin breakpoint($breakpoint) {
+    @media (min-width: $breakpoint) {
+        @content;
+    }
+}
+
+/*
+ * Transitions
+ */
+@mixin transition($selector) {
+    transition : $selector 0.1s;
+}

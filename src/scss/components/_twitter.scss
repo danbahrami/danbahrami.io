@@ -1,0 +1,41 @@
+.twitter {
+    @extend .clearfix;
+
+    display: block;
+    margin: 30px auto 0;
+    text-align: center;
+
+    &__logo {
+        float: left;
+        width: 20px;
+        margin-right: 4px;
+
+        &__path {
+            @include transition(fill);
+
+            fill: $color_twitter;
+        }
+    }
+
+    &__handle {
+        @include transition(color);
+
+        float: left;
+        color: $color_twitter;
+        font-size: 1.4rem;
+    }
+
+    & a {
+        display: inline-block;
+
+        &:hover {
+            & .twitter__logo__path {
+                fill: $color_light;
+            }
+
+            & .twitter__handle {
+                color: $color_light;
+            }
+        }
+    }
+}
