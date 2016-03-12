@@ -1,5 +1,5 @@
-baseurl = "http://danbahrami.com/"
+baseurl = "http://danbahrami.io/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Dan Bahrami - Web developer / Web engineer / Designer"
 pygmentsuseclasses = true
 disqusShortname = "danbahrami"
