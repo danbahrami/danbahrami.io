@@ -2,11 +2,17 @@
     <img
         src="/images/{{ index $.Site.Data.images.hash "avatar.png" }}"
         srcset="/images/{{ index $.Site.Data.images.hash "avatar@2x.png" }} 2x"
-        class="avatar"
+        class="author__avatar"
     />
-    <p>
+    <p class="author__description">
         Hi, I’m Dan Bahrami and I make things for the web.
-        At the moment I am interested in <a>Django</a>, <a>ReactJS</a>, <a>Redux</a>, <a>Elm</a>,
-        <a>HTTP2</a>, <a>Mobile forms</a>
+        At the moment I am interested in
+        <a href="https://www.djangoproject.com/">Django</a>,
+        <a href="http://elm-lang.org/">Elm</a>,
+        <a href="https://http2.github.io/">HTTP2</a>,
+        <a href="https://facebook.github.io/react/">ReactJS</a> and
+        <a href="http://redux.js.org/">Redux</a>.
     </p>
 </div>
+
+{{ partial "twitter.html" . }}
