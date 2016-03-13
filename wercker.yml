@@ -1,4 +1,4 @@
-box: debian
+box: wercker/nodejs
 build:
   steps:
     - npm-install
