@@ -1,7 +1,7 @@
 .author {
+    display: flex;
     text-align: left;
     font-size: 1.6rem;
-    display: flex;
 
     @include breakpoint($tablet) {
         display: block;
@@ -9,14 +9,15 @@
     }
 
     &__avatar {
+        margin-right: 16px;
         width: 75px;
         height: 75px;
-        margin-right: 16px;
+        flex: 0 0 75px;
 
         @include breakpoint($tablet) {
+            margin: 0;
             width: 115px;
             height: 115px;
-            margin: 0;
         }
     }
 
