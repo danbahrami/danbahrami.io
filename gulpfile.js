@@ -41,11 +41,18 @@ gulp.task("images", function () {
         .pipe(gulp.dest("data/images"))
 })
 
+// Pass favicon through separately
+gulp.task("favicon", function () {
+    gulp.src("src/images/favicon.ico")
+        .pipe(gulp.dest("static/images"))
+})
+
 // Watch asset folder for changes
-gulp.task("watch", ["dev-scss", "images"], function () {
+gulp.task("watch", ["dev-scss", "images", "favicon"], function () {
     gulp.watch("src/scss/**/*", ["scss"])
     gulp.watch("src/images/**/*", ["images"])
+    gulp.watch("src/images/favicon.ico", ["favicon"])
 })
 
 // Set production build as default task
-gulp.task("default", ["scss", "images"])
+gulp.task("default", ["scss", "images", "favicon"])
