@@ -1,0 +1,11 @@
+pre {
+    margin-bottom: 30px;
+}
+
+.highlight {
+    & pre {
+        margin : 0;
+    }
+
+    margin-bottom: 30px;
+}
