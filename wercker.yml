@@ -14,3 +14,4 @@ deploy:
             key_secret: $SECRET
             bucket_url: $URL
             source_dir: public/
+            opts: --add-header=Cache-Control:max-age=3600
