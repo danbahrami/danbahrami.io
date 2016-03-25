@@ -1,7 +1,8 @@
 var gulp         = require("gulp"),
-    sourcemaps   = require("gulp-sourcemaps"),
-    sass         = require("gulp-sass"),
     autoprefixer = require("gulp-autoprefixer"),
+    sourcemaps   = require("gulp-sourcemaps"),
+    imagemin     = require("gulp-imagemin"),
+    sass         = require("gulp-sass"),
     hash         = require("gulp-hash"),
     del          = require("del")
 
@@ -35,6 +36,7 @@ gulp.task("dev-scss", function () {
 gulp.task("images", function () {
     del(["static/images/**/*"])
     gulp.src("src/images/**/*")
+        .pipe(imagemin({progressive: true}))
         .pipe(hash())
         .pipe(gulp.dest("static/images"))
         .pipe(hash.manifest("hash.json"))
