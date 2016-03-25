@@ -7,11 +7,10 @@
                 <h1><a href="{{ .Permalink }}" class="article__title">{{ .Title }}</a></h1>
                 <div class="article__byline">
                     <time
-                        pubdate
                         datetime="{{ .PublishDate.Format "2006-01-02"}}"
-                    title="{{ .PublishDate.Format "Mon, Jan 2, 2006" }}"
+                        title="{{ .PublishDate.Format "Mon, Jan 2, 2006" }}"
                     >
-                    {{ .PublishDate.Format "Mon, Jan 2, 2006" }}
+                        {{ .PublishDate.Format "Mon, Jan 2, 2006" }}
                     </time>
                 </div>
                 <div class="article__content">
