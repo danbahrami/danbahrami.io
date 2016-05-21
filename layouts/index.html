@@ -1,4 +1,5 @@
 {{ partial "header.html" . }}
+<div class="container">
     <main>
         <div class="content">
             {{ range first 10 .Data.Pages }}
@@ -21,10 +22,29 @@
                 {{ end }}
             </article>
             {{ end }}
+
+            {{ if eq .Type "games" }}
+            <article class="article">
+                <h1><a href="{{ .Permalink }}" class="article__title">{{ .Title }}</a></h1>
+                <div class="article__byline">
+                    <time
+                        datetime="{{ .PublishDate.Format "2006-01-02"}}"
+                    title="{{ .PublishDate.Format "Mon, Jan 2, 2006" }}"
+                    >
+                    {{ .PublishDate.Format "Mon, Jan 2, 2006" }}
+                    </time>
+                </div>
+                <div class="article__content">
+                    {{ .Summary }}
+                </div>
+                <a href="{{ .Permalink }}" class="article__read-more">Play the game</a>
+            </article>
+            {{ end }}
             {{ end }}
         </div>
         <aside class="sidebar sidebar--fixed">
             {{ partial "author.html" . }}
         </aside>
     </main>
+</div>
 {{ partial "footer.html" . }}

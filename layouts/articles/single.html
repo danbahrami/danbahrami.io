@@ -1,44 +1,46 @@
 {{ partial "header.html" . }}
-<main>
-    <div class="content">
-        <a href="{{ .Site.BaseURL }}" class="home-link">
-            Go home
-        </a>
-        <article class="article">
-            <!--{{ .TableOfContents }}-->
-            <header>
-                <h1 class="article__title">{{ .Title }}</h1>
-                <div class="article__byline">
-                    <time
-                        datetime="{{ .PublishDate.Format "2006-01-02"}}"
-                        title="{{ .PublishDate.Format "Monday, Jan 2, 2006" }}"
-                    >
-                    {{ .PublishDate.Format "Mon, Jan 2, 2006" }}
-                    </time>
+<div class="container">
+    <main>
+        <div class="content">
+            <a href="{{ .Site.BaseURL }}" class="home-link">
+                Go home
+            </a>
+            <article class="article">
+                <!--{{ .TableOfContents }}-->
+                <header>
+                    <h1 class="article__title">{{ .Title }}</h1>
+                    <div class="article__byline">
+                        <time
+                            datetime="{{ .PublishDate.Format "2006-01-02"}}"
+                            title="{{ .PublishDate.Format "Monday, Jan 2, 2006" }}"
+                        >
+                        {{ .PublishDate.Format "Mon, Jan 2, 2006" }}
+                        </time>
+                    </div>
+                </header>
+                <div class="article__content">
+                    {{ .Content }}
                 </div>
-            </header>
-            <div class="article__content">
-                {{ .Content }}
-            </div>
-            {{ if .Params.resources }}
-            <div class="article__resources">
-                <span class="article__resources__title">
-                    Resources
-                </span>
-                <ul>
-                    {{ range .Params.resources }}
-                        <li>
-                            <a href="{{ . }}" class="article__resources__link" target="_blank">{{ . }}</a>
-                        </li>
-                    {{ end }}
-                </ul>
-            </div>
-            {{ end }}
-        </article>
-        {{ partial "comments.html" . }}
-    </div>
-    <aside class="sidebar sidebar--fixed">
-        {{ partial "author.html" . }}
-    </aside>
-</main>
+                {{ if .Params.resources }}
+                <div class="article__resources">
+                    <span class="article__resources__title">
+                        Resources
+                    </span>
+                    <ul>
+                        {{ range .Params.resources }}
+                            <li>
+                                <a href="{{ . }}" class="article__resources__link" target="_blank">{{ . }}</a>
+                            </li>
+                        {{ end }}
+                    </ul>
+                </div>
+                {{ end }}
+            </article>
+            {{ partial "comments.html" . }}
+        </div>
+        <aside class="sidebar sidebar--fixed">
+            {{ partial "author.html" . }}
+        </aside>
+    </main>
+</div>
 {{ partial "footer.html" . }}
