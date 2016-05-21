@@ -6,9 +6,6 @@ build:
     - hgen/gulp
     - arjen/hugo-build@1.8.3:
       version: "0.14"
-    - samueldebruyn/minify:
-      css: false
-      js: false
 
 deploy:
   steps:
